@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  hugo:
+    image: 'andersonpids/hugo:latest'
+    networks:
+      - development
+  blog:
+    image: 'andersonpids/hugo:latest'
+    container_name: blog
+    networks:
+      - development
+    ports:
+      - '1313:1313'
+    volumes:
+      - "./blog:/src"
+    command: server -D  
+
+networks:
+  development:
+    name: apids_network
+    driver: bridge
