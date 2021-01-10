@@ -35,7 +35,11 @@ shell:
 
 .PHONY: run
 run:
-	@docker-compose run blog $(filter-out $@,$(MAKECMDGOALS))
+	@docker-compose run -p 1313:1313 blog $(filter-out $@,$(MAKECMDGOALS))
+
+.PHONY: exec
+exec:
+	@docker-compose exec blog hugo $(filter-out $@,$(MAKECMDGOALS))
 
 # Scape rule to match with any task. Case to avoid arguments of rule run
 # Ref. beta at https://stackoverflow.com/questions/6273608/how-to-pass-argument-to-makefile-from-command-line/6273809#6273809

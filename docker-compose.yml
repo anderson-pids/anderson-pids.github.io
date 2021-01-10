@@ -13,7 +13,7 @@ services:
     ports:
       - '1313:1313'
     volumes:
-      - "./blog:/src"
+      - ".:/src"
     command: server -D  
 
 networks:
