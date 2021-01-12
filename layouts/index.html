@@ -10,10 +10,19 @@
     </a>
   </h2>
   {{ $dateFormat := $.Site.Params.dateFormat | default "Jan 2, 2006" }}
-  <strong>{{ .PublishDate.Format $dateFormat }}</strong>
-  <br/>
+  <!-- <strong>{{ .PublishDate.Format $dateFormat }}</strong> -->
+  
+  
+  <small>{{ .PublishDate.Format $dateFormat }} &middot;
+    {{ with .Params.tags }}
+    <strong>Tags: </strong>
+    {{ range . }}
+    <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+    {{ end }}
+  </small><br/>
   {{ if ne .Params.show_summary false }}
-    {{ .Summary }}
+    <span class="summary-text">{{ .Summary }}</span>
   {{ end }}
 {{ end }}
 {{ end }}
