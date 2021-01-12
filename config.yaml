@@ -1,7 +1,7 @@
 baseURL: https://anderson-pids.github.io/
-languageCode: en-us
-defaultContentLanguage: en
-title: Anderson exp.
+languageCode: pt-br
+defaultContentLanguage: pt
+title: Anderson Pids
 theme: papercss-hugo-theme
 googleAnalytics: UA-186928098-1
 disqusShortname: andersonpids
@@ -20,9 +20,9 @@ imaging:
   quality: 99
 
 params:
-  homeMetaContent: A Hugo theme made with PaperCSS.
+  homeMetaContent: Portal de experiências, tecnologia, computação entre outras bizarrices.
   # For more date formats see https://gohugo.io/functions/format/
-  dateFormat: Jan 6, 2021
+  dateFormat: 02 Jan 06 15:04 BRT
   navTitleLink: /
 
 menu:
