@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ range $pages.ByPublishDate.Reverse }}
+  <h2 class="post-list {{ if ne .Params.show_summary false }}summary{{ end }}">
+    <a href="{{ .Permalink }}">
+      {{ .Title }}
+    </a>
+  </h2>
+  {{ $dateFormat := $.Site.Params.dateFormat | default "Jan 2, 2006" }}
+  <strong>{{ .PublishDate.Format $dateFormat }}</strong>
+  <br/>
+  {{ if ne .Params.show_summary false }}
+    {{ .Summary }}
+  {{ end }}
+{{ end }}
+{{ end }}
