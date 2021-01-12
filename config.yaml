@@ -28,7 +28,7 @@ params:
 menu:
   nav:
     - name: Blog
-      url: /posts/
+      url: /post/
       weight: 1
     - name: Tags
       url: /tags/

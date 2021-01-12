@@ -1,13 +1,12 @@
 ---
 author: Anderson Pids
-title: Primeiro Blog
+title: Primeiro Blog de teste
 linktitle: Meu primeiro blog
-date: 2021-01-09T16:09:51Z
-# date: 2014-09-28
+date: 2014-09-28
 draft: true
 weight: 10
 tags: ['lifestyle', 'blog', 'hugo']
-description: "Certo dia, a beira-mar, apareceu..um jovem"
+description: "Descricao da paigna para SEO"
 show_summary: false
 ---
 
