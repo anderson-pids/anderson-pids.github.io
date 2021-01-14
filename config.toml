@@ -1,19 +1,19 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-author = "Hugo Authors"
-title = "Vitae"
+author = "Anderson Pids"
+title = "Blog do Anderson Pids"
 theme = "hugo-vitae"
 paginate = 5
 enableRobotsTXT = true
 
-copyright = "© Copyright notice | [Vitae](https://github.com/dataCobra/hugo-vitae) theme for [Hugo](https://gohugo.io)"
+copyright = "© Copyright notice | [Vitae](https://github.com/dataCobra/hugo-vitae) theme"
 
 pygmentsstyle = "colorful"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-googleAnalytics = ""
+googleAnalytics = "UA-186928098-1"
 
 [taxonomies]
 	tag = "tags"
@@ -28,13 +28,13 @@ googleAnalytics = ""
 	keywords = ["hugo","vitae","theme","static"]
 
 	# Add meta description in head part
-	description = "Vitae is a blog theme for Hugo that focuses on your content."
+	description = "Portal de experiências de computação e outras bizarrices"
 
 	# Add pagetitle to homepage <title> tag
-	pagetitle = "All about static site generation"
+	pagetitle = "Computação e outas coisas interessantes"
 
 	# Add a subtitle to your website
-	subtitle = "[Vitae](https://github.com/dataCobra/hugo-vitae) is a blog theme for Hugo that focuses on your content."
+	subtitle = "Blog de experiências de computação e outras bizarrices"
 
 	# Activate to show authors on pages if available
 	#listAuthor = true
@@ -46,10 +46,10 @@ googleAnalytics = ""
 	avatar = "/img/vitae.jpg"
 
 	# Optional favicons for website
-	#favicon = true
+	favicon = true
 
 	# Add list of sections that should show up on the homepage
-        mainSections = ["post"]
+    mainSections = ["post"]
 
 	# Add list of Sections/Types that should no be considered by RSS
 	#nofeedSections = ["post"]
@@ -63,18 +63,18 @@ googleAnalytics = ""
 # Comments
 [params.comments]
 # Enable Comments with "true"
-enabled = false
+enabled = true
 
 # Comment provider:
 #   disqus (https://disqus.com)
 #   commento (https://commento.io)
-#engine = "disqus"
+engine = "disqus"
 
 # Content types to disable comments on.
 #disableOnTypes = ["page"]
 
 [params.comments.disqus]
-#shortname = "" # Paste the shortname from your Disqus dashboard.
+shortname = "andersonpids" # Paste the shortname from your Disqus dashboard.
 
 [params.comments.commento]
 #host = "" # Paste the domain of you commento.io system
@@ -109,14 +109,18 @@ weight = 5
 [[params.social]]
 name = "Github"
 icon = "fab fa-github"
-url = "https://github.com/dataCobra/hugo-vitae"
+url  = "https://github.com/anderson-pids/"
 
-#[[params.social]]
-#name = "Email"
-#icon = "fas fa-envelope"
-#cmd = "mailto:example@example.com"
+[[params.social]]
+name = "Linkedin"
+icon = "fab fa-linkedin"
+url  = "https://www.linkedin.com/in/andersonpimentel/"
+# [[params.social]]
+# name = "Email"
+# icon = "fas fa-envelope"
+# cmd = "mailto:apds.anderson@gmail.com"
 
 [[params.social]]
 name = "RSS"
 icon = "fas fa-rss"
-url = "/index.xml"
+url  = "/index.xml"
