@@ -7,7 +7,7 @@ theme = "hugo-vitae"
 paginate = 5
 enableRobotsTXT = true
 
-copyright = "© Copyright notice | [Vitae](https://github.com/dataCobra/hugo-vitae) theme"
+copyright = "Copyright © [Vitae](https://github.com/dataCobra/hugo-vitae) theme. All rights reserved."
 
 pygmentsstyle = "colorful"
 pygmentscodefences = true
@@ -28,16 +28,16 @@ googleAnalytics = "UA-186928098-1"
 	keywords = ["hugo","vitae","theme","static"]
 
 	# Add meta description in head part
-	description = "Portal de experiências de computação e outras bizarrices"
+	description = "O blog de experiências de computação, algoritmos, tecnologia e otras cositas más"
 
 	# Add pagetitle to homepage <title> tag
-	pagetitle = "Computação e outas coisas interessantes"
+	pagetitle = "Coisas interessantes de computação"
 
 	# Add a subtitle to your website
 	subtitle = "Blog de experiências de computação e outras bizarrices"
 
 	# Activate to show authors on pages if available
-	#listAuthor = true
+	# listAuthor = true
 
 	# Add math typesetting with KaTeX (Global with this Param)
 	math = true
@@ -115,6 +115,7 @@ url  = "https://github.com/anderson-pids/"
 name = "Linkedin"
 icon = "fab fa-linkedin"
 url  = "https://www.linkedin.com/in/andersonpimentel/"
+
 # [[params.social]]
 # name = "Email"
 # icon = "fas fa-envelope"
