@@ -35,7 +35,7 @@ shell:
 
 .PHONY: run
 run:
-	@docker-compose run -p 1313:1313 blog $(filter-out $@,$(MAKECMDGOALS))
+	@docker-compose run --rm -p 1313:1313 blog $(filter-out $@,$(MAKECMDGOALS))
 
 .PHONY: exec
 exec:
