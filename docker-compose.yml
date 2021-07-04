@@ -1,12 +1,8 @@
 version: '3.7'
 
 services:
-  hugo:
-    image: 'andersonpids/hugo:latest'
-    networks:
-      - development
   blog:
-    image: 'andersonpids/hugo:latest'
+    image: 'klakegg/hugo:0.83.1-alpine'
     container_name: blog
     networks:
       - development
