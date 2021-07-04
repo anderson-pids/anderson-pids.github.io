@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://anderson-pids.github.io/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 author = "Anderson Pids"
@@ -25,7 +25,7 @@ googleAnalytics = "UA-186928098-1"
 	homepage = false
 
 	# Add meta keywords in head part (Site Keywords or Tags of Page)
-	keywords = ["hugo","vitae","theme","static"]
+	keywords = ["anderson","pids","computer","blog"]
 
 	# Add meta description in head part
 	description = "O blog de experiências de computação, algoritmos, tecnologia e otras cositas más"
@@ -52,7 +52,7 @@ googleAnalytics = "UA-186928098-1"
     mainSections = ["post"]
 
 	# Add list of Sections/Types that should no be considered by RSS
-	#nofeedSections = ["post"]
+	nofeedSections = ["post"]
 
 	# Deactivate Taxonomies for specific page types
 	#disableTaxoTypes = [""]

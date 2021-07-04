@@ -33,6 +33,10 @@ stop:
 shell:
 	@docker-compose exec blog bash
 
+.PHONY: build-site
+build-site:
+	@docker-compose exec blog hugo -D
+
 .PHONY: run
 run:
 	@docker-compose run --rm -p 1313:1313 blog $(filter-out $@,$(MAKECMDGOALS))
