@@ -2,7 +2,7 @@
 title: "Apresentação Pessoal"
 date: 2021-01-15T04:17:58Z
 author: Anderson Pids
-draft: true
+draft: false
 ---
 
 Olá pessoal, meu nome é Anderson Pimentel dos Santos, vulgo Anderson Pids, venho nessa primeiro postagem fazer minha apresentação pessoal e apresentar quais será a temática desse blog pessoal, mas já adianto que serão assuntos bem aleatórios, que dependem muito do que estarei vivenciando na parte profissional e pessoal.
