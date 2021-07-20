@@ -5,7 +5,7 @@ author: Anderson Pids
 aliases: 
     - /sobre
     - /contato
-draft: true
+draft: false
 enableEmoji: true
 ---
 
