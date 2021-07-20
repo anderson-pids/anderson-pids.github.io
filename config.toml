@@ -13,6 +13,7 @@ pygmentsstyle = "colorful"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
+enableInlineShortcodes = true
 googleAnalytics = "UA-186928098-1"
 
 [taxonomies]
@@ -34,7 +35,7 @@ googleAnalytics = "UA-186928098-1"
 	pagetitle = "Coisas interessantes de computação"
 
 	# Add a subtitle to your website
-	subtitle = "Blog de experiências de computação e outras bizarrices"
+	subtitle = "⚡ I'm a farm boy working with computers, what could go wrong?"
 
 	# Activate to show authors on pages if available
 	# listAuthor = true
