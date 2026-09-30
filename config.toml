@@ -35,6 +35,10 @@ copyright = "© Anderson Pimentel"
   [params.profileMode]
     enabled = true
     title = "Anderson Pimentel"
+    imageUrl = "img/profile.jpg"
+    imageWidth = 160
+    imageHeight = 160
+    imageTitle = "Anderson Pimentel"
     subtitle = "Senior SRE / Platform Engineer · Kubernetes, GitOps, observability and AI in production"
 
     [[params.profileMode.buttons]]
