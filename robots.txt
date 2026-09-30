@@ -1,1 +1,3 @@
 User-agent: *
+Disallow:
+Sitemap: https://www.anderson-pids.com.br/sitemap.xml
