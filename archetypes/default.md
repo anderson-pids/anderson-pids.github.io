@@ -1,7 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-author: Anderson Pids
+author: Anderson Pimentel
+description: ""
+tags: []
 draft: true
 ---
-
