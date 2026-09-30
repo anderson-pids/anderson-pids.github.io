@@ -1,51 +1,24 @@
-UID=$(shell id -u)
-GID=$(shell id -g)
+HUGO_IMAGE := ghcr.io/gohugoio/hugo:v0.167.0
+DOCKER_RUN := docker run --rm -u $(shell id -u):$(shell id -g) -v "$(CURDIR)":/project $(HUGO_IMAGE)
 
-.PHONY: pull
-pull:
-	@docker-compose pull hugo
+.PHONY: init serve build new-post clean
 
-# .PHONY: build
-# build:
-# 	@docker-compose build --build-arg USER_ID=${UID} --build-arg GROUP_ID=${GID}
+## Baixa o tema (submódulo git). Rodar uma vez após o clone.
+init:
+	git submodule update --init --recursive
 
-# .PHONY: build-no-cache
-# build-no-cache:
-# 	@docker-compose build --no-cache --build-arg USER_ID=${UID} --build-arg GROUP_ID=${GID}
+## Servidor local com rascunhos em http://localhost:1313 (Ctrl+C para parar)
+serve:
+	UID=$(shell id -u) GID=$(shell id -g) docker compose up blog
 
-.PHONY: down
-down:
-	@docker-compose down
+## Build de produção em ./public (mesmo comando da CI)
+build:
+	$(DOCKER_RUN) --minify
 
-.PHONY: up
-up:
-	@docker-compose up blog
+## Cria um post novo: make new-post name=meu-post
+new-post:
+	@test -n "$(name)" || (echo "uso: make new-post name=meu-post" && exit 1)
+	$(DOCKER_RUN) new content post/$(name).md
 
-.PHONY: up-silent
-up-silent:
-	@docker-compose up -d blog
-
-.PHONY: stop
-stop:
-	@docker-compose stop blog
-
-.PHONY: shell
-shell:
-	@docker-compose exec blog bash
-
-.PHONY: build-site
-build-site:
-	@docker-compose exec blog hugo -D
-
-.PHONY: run
-run:
-	@docker-compose run --rm -p 1313:1313 blog $(filter-out $@,$(MAKECMDGOALS))
-
-.PHONY: exec
-exec:
-	@docker-compose exec blog hugo $(filter-out $@,$(MAKECMDGOALS))
-
-# Scape rule to match with any task. Case to avoid arguments of rule run
-# Ref. beta at https://stackoverflow.com/questions/6273608/how-to-pass-argument-to-makefile-from-command-line/6273809#6273809
-%:
-	@:
+clean:
+	rm -rf public resources/_gen .hugo_build.lock

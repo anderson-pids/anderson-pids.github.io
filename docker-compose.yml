@@ -1,18 +1,10 @@
-version: '3.7'
-
 services:
   blog:
-    image: 'klakegg/hugo:0.83.1-alpine'
+    image: ghcr.io/gohugoio/hugo:v0.167.0
     container_name: blog
-    networks:
-      - development
+    user: "${UID:-1000}:${GID:-1000}"
     ports:
-      - '1313:1313'
+      - "1313:1313"
     volumes:
-      - ".:/src"
-    command: server -D  
-
-networks:
-  development:
-    name: apids_network
-    driver: bridge
+      - ".:/project"
+    command: server --bind 0.0.0.0 --buildDrafts --baseURL http://localhost:1313/ --appendPort=false
