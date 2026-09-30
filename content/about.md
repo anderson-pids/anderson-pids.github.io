@@ -1,37 +1,30 @@
 ---
 title: "About"
 date: 2021-01-15T04:02:48Z
-author: Anderson Pids
-aliases: 
+lastmod: 2026-09-29
+author: Anderson Pimentel
+aliases:
     - /sobre
     - /contato
 draft: false
-enableEmoji: true
 ---
 
-## Hi there 👋, Anderson Pids here!
+## Anderson Pimentel: Senior SRE / Platform Engineer
 
-### ⚡ I'm a farm boy working with computers, what could go wrong?
+I've spent about ten years in engineering, most of them building and running platforms: Kubernetes in production, GitOps, AWS and observability.
 
-<!--
-**anderson-pids/anderson-pids** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+- **Flutter Brazil**: Senior Site Reliability Engineer (current).
+- **Seazone** (PropTech): owned the platform end to end, including a GitOps delivery pipeline (GitHub Actions → ECR → ArgoCD → EKS), a self-hosted Grafana observability stack (Prometheus, Loki, Tempo), and an agentic AI platform running on the same cluster, with LLM observability through Langfuse and LiteLLM.
+- **Hello Saks**: Platform Team Lead, with Terraform and Terragrunt across multiple AWS accounts.
+- **Méliuz** (fintech): SRE to Technical SRE Manager. I led the Black Friday rebuild (autoscaling, load testing, circuit breakers, runbooks) that took the following year to zero critical incidents.
+- Co-founder of **Atenux**, a multi-tenant AI SaaS.
 
--->
+M.Sc. in Informatics (UFAM). Based in Boa Vista, Brazil (GMT-4), working remotely.
 
-## About me
-- 🔭 I’m currently working on tagging of resources and dominoes game
-- 🌱 I’m currently learning about IaC, containers orchestration, tools and techniques of observability
-- 👯 I’m looking to collaborate on projects about agro business
-- 🤔 I’m exploring new technologies and developing software solutions
-- 💬 Ask me about datadog, nodejs addons, rec. systems and search engines
+Here I write about what I build and learn: platform engineering, reliability, and running AI systems in production.
 
-## Github Stats:
+## Get in touch
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anderson-pids&?count_private=true&show_icons=true&theme=dracula)
-
-## 📫 How to reach me
-<p align="center">
-<a href="https://anderson-pids.com.br/"><img alt="Website" src="https://img.shields.io/badge/Website-anderson--pids.com-blue?style=flat-square&logo=google-chrome"></a>
-<a href="https://www.linkedin.com/in/andersonpimentel/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Anderson%20Pimentel-blue?style=flat-square&logo=linkedin"></a>
-<a href="mailto:apds.anderson@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-apds.anderson@gmail.com-blue?style=flat-square&logo=gmail"></a>
-</p>
+- LinkedIn: [linkedin.com/in/andersonpimentel](https://www.linkedin.com/in/andersonpimentel/)
+- GitHub: [github.com/anderson-pids](https://github.com/anderson-pids)
+- Email: [apds.anderson@gmail.com](mailto:apds.anderson@gmail.com)

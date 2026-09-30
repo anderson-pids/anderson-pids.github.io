@@ -1,20 +1,18 @@
-baseURL = "https://anderson-pids.github.io/"
-languageCode = "en-us"
+baseURL = "https://www.anderson-pids.com.br/"
+locale = "en-us"
 defaultContentLanguage = "en"
-author = "Anderson Pids"
-title = "Blog do Anderson Pids"
+author = "Anderson Pimentel"
+title = "Anderson Pimentel"
 theme = "hugo-vitae"
-paginate = 5
 enableRobotsTXT = true
 
-copyright = "Copyright © [Vitae](https://github.com/dataCobra/hugo-vitae) theme. All rights reserved."
+copyright = "© Anderson Pimentel"
 
 pygmentsstyle = "colorful"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 enableInlineShortcodes = true
-googleAnalytics = "UA-186928098-1"
 
 [taxonomies]
 	tag = "tags"
@@ -26,16 +24,16 @@ googleAnalytics = "UA-186928098-1"
 	homepage = false
 
 	# Add meta keywords in head part (Site Keywords or Tags of Page)
-	keywords = ["anderson","pids","computer","blog"]
+	keywords = ["anderson pimentel","sre","platform engineering","kubernetes","gitops","observability","llmops"]
 
 	# Add meta description in head part
-	description = "O blog de experiências de computação, algoritmos, tecnologia e otras cositas más"
+	description = "Anderson Pimentel writes about platform engineering, site reliability and running AI systems in production."
 
 	# Add pagetitle to homepage <title> tag
-	pagetitle = "Coisas interessantes de computação"
+	pagetitle = "Platform engineering, reliability and AI in production"
 
 	# Add a subtitle to your website
-	subtitle = "⚡ I'm a farm boy working with computers, what could go wrong?"
+	subtitle = "Senior SRE / Platform Engineer · Kubernetes, GitOps, observability and AI in production"
 
 	# Activate to show authors on pages if available
 	# listAuthor = true
@@ -126,3 +124,6 @@ url  = "https://www.linkedin.com/in/andersonpimentel/"
 name = "RSS"
 icon = "fas fa-rss"
 url  = "/index.xml"
+
+[pagination]
+  pagerSize = 5
