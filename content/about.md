@@ -7,6 +7,11 @@ aliases:
     - /sobre
     - /contato
 draft: false
+ShowToc: false
+hideMeta: true
+ShowBreadCrumbs: false
+ShowShareButtons: false
+ShowPostNavLinks: false
 ---
 
 ## Anderson Pimentel: Senior SRE / Platform Engineer

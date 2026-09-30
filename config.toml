@@ -1,129 +1,87 @@
 baseURL = "https://www.anderson-pids.com.br/"
 locale = "en-us"
-defaultContentLanguage = "en"
-author = "Anderson Pimentel"
 title = "Anderson Pimentel"
-theme = "hugo-vitae"
+theme = "PaperMod"
 enableRobotsTXT = true
-
 copyright = "© Anderson Pimentel"
-
-pygmentsstyle = "colorful"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
-
-enableInlineShortcodes = true
-
-[taxonomies]
-	tag = "tags"
-	category = "categories"
-	series = "series"
-
-[params]
-	# Use homepage.md instead of a list of posts
-	homepage = false
-
-	# Add meta keywords in head part (Site Keywords or Tags of Page)
-	keywords = ["anderson pimentel","sre","platform engineering","kubernetes","gitops","observability","llmops"]
-
-	# Add meta description in head part
-	description = "Anderson Pimentel writes about platform engineering, site reliability and running AI systems in production."
-
-	# Add pagetitle to homepage <title> tag
-	pagetitle = "Platform engineering, reliability and AI in production"
-
-	# Add a subtitle to your website
-	subtitle = "Senior SRE / Platform Engineer · Kubernetes, GitOps, observability and AI in production"
-
-	# Activate to show authors on pages if available
-	# listAuthor = true
-
-	# Add math typesetting with KaTeX (Global with this Param)
-	math = true
-
-	# Optional 80x80 avatar image.
-	avatar = "/img/vitae.jpg"
-
-	# Optional favicons for website
-	favicon = true
-
-	# Add list of sections that should show up on the homepage
-    mainSections = ["post"]
-
-	# Add list of Sections/Types that should no be considered by RSS
-	nofeedSections = ["post"]
-
-	# Deactivate Taxonomies for specific page types
-	#disableTaxoTypes = [""]
-
-	# Custom CSS applied to default styles. (Path could be "static/css/")
-	#customCSS = "css/custom.css"
-
-# Comments
-[params.comments]
-# Enable Comments with "true"
-enabled = true
-
-# Comment provider:
-#   disqus (https://disqus.com)
-#   commento (https://commento.io)
-engine = "disqus"
-
-# Content types to disable comments on.
-#disableOnTypes = ["page"]
-
-[params.comments.disqus]
-shortname = "andersonpids" # Paste the shortname from your Disqus dashboard.
-
-[params.comments.commento]
-#host = "" # Paste the domain of you commento.io system
-
-# Navigation
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[menu.main]]
-name = "All Posts"
-url = "/post"
-weight = 2
-
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 3
-
-[[menu.main]]
-name = "Tags"
-url = "/tags"
-weight = 4
-
-[[menu.main]]
-name = "Categories"
-url = "/categories"
-weight = 5
-
-# Social Menu
-[[params.social]]
-name = "Github"
-icon = "fab fa-github"
-url  = "https://github.com/anderson-pids/"
-
-[[params.social]]
-name = "Linkedin"
-icon = "fab fa-linkedin"
-url  = "https://www.linkedin.com/in/andersonpimentel/"
-
-# [[params.social]]
-# name = "Email"
-# icon = "fas fa-envelope"
-# cmd = "mailto:apds.anderson@gmail.com"
-
-[[params.social]]
-name = "RSS"
-icon = "fas fa-rss"
-url  = "/index.xml"
 
 [pagination]
   pagerSize = 5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup.highlight]
+  noClasses = false
+
+[params]
+  env = "production"
+  title = "Anderson Pimentel"
+  description = "Anderson Pimentel writes about platform engineering, site reliability and running AI systems in production."
+  keywords = ["anderson pimentel", "sre", "platform engineering", "kubernetes", "gitops", "observability", "llmops"]
+  author = "Anderson Pimentel"
+  defaultTheme = "auto"
+  mainSections = ["post"]
+  DateFormat = "January 2, 2006"
+  ShowReadingTime = true
+  ShowToc = true
+  TocOpen = false
+  ShowCodeCopyButtons = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowShareButtons = true
+  ShareButtons = ["linkedin", "x"]
+
+  [params.profileMode]
+    enabled = true
+    title = "Anderson Pimentel"
+    subtitle = "Senior SRE / Platform Engineer · Kubernetes, GitOps, observability and AI in production"
+
+    [[params.profileMode.buttons]]
+      name = "Posts"
+      url = "/post/"
+
+    [[params.profileMode.buttons]]
+      name = "About"
+      url = "/about/"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/andersonpimentel/"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/anderson-pids"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:apds.anderson@gmail.com"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+[[menu.main]]
+  name = "Posts"
+  url = "/post/"
+  weight = 1
+
+[[menu.main]]
+  name = "Archive"
+  url = "/archives/"
+  weight = 2
+
+[[menu.main]]
+  name = "Search"
+  url = "/search/"
+  weight = 3
+
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 4
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 5
