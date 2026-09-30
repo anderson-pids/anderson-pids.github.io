@@ -1,128 +1,91 @@
-baseURL = "https://anderson-pids.github.io/"
-languageCode = "en-us"
-defaultContentLanguage = "en"
-author = "Anderson Pids"
-title = "Blog do Anderson Pids"
-theme = "hugo-vitae"
-paginate = 5
+baseURL = "https://www.anderson-pids.com.br/"
+locale = "en-us"
+title = "Anderson Pimentel"
+theme = "PaperMod"
 enableRobotsTXT = true
+copyright = "© Anderson Pimentel"
 
-copyright = "Copyright © [Vitae](https://github.com/dataCobra/hugo-vitae) theme. All rights reserved."
+[pagination]
+  pagerSize = 5
 
-pygmentsstyle = "colorful"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
 
-enableInlineShortcodes = true
-googleAnalytics = "UA-186928098-1"
-
-[taxonomies]
-	tag = "tags"
-	category = "categories"
-	series = "series"
+[markup.highlight]
+  noClasses = false
 
 [params]
-	# Use homepage.md instead of a list of posts
-	homepage = false
+  env = "production"
+  title = "Anderson Pimentel"
+  description = "Anderson Pimentel writes about platform engineering, site reliability and running AI systems in production."
+  keywords = ["anderson pimentel", "sre", "platform engineering", "kubernetes", "gitops", "observability", "llmops"]
+  author = "Anderson Pimentel"
+  defaultTheme = "auto"
+  mainSections = ["post"]
+  DateFormat = "January 2, 2006"
+  ShowReadingTime = true
+  ShowToc = true
+  TocOpen = false
+  ShowCodeCopyButtons = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowShareButtons = true
+  ShareButtons = ["linkedin", "x"]
 
-	# Add meta keywords in head part (Site Keywords or Tags of Page)
-	keywords = ["anderson","pids","computer","blog"]
+  [params.profileMode]
+    enabled = true
+    title = "Anderson Pimentel"
+    imageUrl = "img/profile.jpg"
+    imageWidth = 160
+    imageHeight = 160
+    imageTitle = "Anderson Pimentel"
+    subtitle = "Senior SRE / Platform Engineer · Kubernetes, GitOps, observability and AI in production"
 
-	# Add meta description in head part
-	description = "O blog de experiências de computação, algoritmos, tecnologia e otras cositas más"
+    [[params.profileMode.buttons]]
+      name = "Posts"
+      url = "/post/"
 
-	# Add pagetitle to homepage <title> tag
-	pagetitle = "Coisas interessantes de computação"
+    [[params.profileMode.buttons]]
+      name = "About"
+      url = "/about/"
 
-	# Add a subtitle to your website
-	subtitle = "⚡ I'm a farm boy working with computers, what could go wrong?"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/andersonpimentel/"
 
-	# Activate to show authors on pages if available
-	# listAuthor = true
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/anderson-pids"
 
-	# Add math typesetting with KaTeX (Global with this Param)
-	math = true
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:apds.anderson@gmail.com"
 
-	# Optional 80x80 avatar image.
-	avatar = "/img/vitae.jpg"
-
-	# Optional favicons for website
-	favicon = true
-
-	# Add list of sections that should show up on the homepage
-    mainSections = ["post"]
-
-	# Add list of Sections/Types that should no be considered by RSS
-	nofeedSections = ["post"]
-
-	# Deactivate Taxonomies for specific page types
-	#disableTaxoTypes = [""]
-
-	# Custom CSS applied to default styles. (Path could be "static/css/")
-	#customCSS = "css/custom.css"
-
-# Comments
-[params.comments]
-# Enable Comments with "true"
-enabled = true
-
-# Comment provider:
-#   disqus (https://disqus.com)
-#   commento (https://commento.io)
-engine = "disqus"
-
-# Content types to disable comments on.
-#disableOnTypes = ["page"]
-
-[params.comments.disqus]
-shortname = "andersonpids" # Paste the shortname from your Disqus dashboard.
-
-[params.comments.commento]
-#host = "" # Paste the domain of you commento.io system
-
-# Navigation
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
 
 [[menu.main]]
-name = "All Posts"
-url = "/post"
-weight = 2
+  name = "Posts"
+  url = "/post/"
+  weight = 1
 
 [[menu.main]]
-name = "About"
-url = "/about"
-weight = 3
+  name = "Archive"
+  url = "/archives/"
+  weight = 2
 
 [[menu.main]]
-name = "Tags"
-url = "/tags"
-weight = 4
+  name = "Search"
+  url = "/search/"
+  weight = 3
 
 [[menu.main]]
-name = "Categories"
-url = "/categories"
-weight = 5
+  name = "Tags"
+  url = "/tags/"
+  weight = 4
 
-# Social Menu
-[[params.social]]
-name = "Github"
-icon = "fab fa-github"
-url  = "https://github.com/anderson-pids/"
-
-[[params.social]]
-name = "Linkedin"
-icon = "fab fa-linkedin"
-url  = "https://www.linkedin.com/in/andersonpimentel/"
-
-# [[params.social]]
-# name = "Email"
-# icon = "fas fa-envelope"
-# cmd = "mailto:apds.anderson@gmail.com"
-
-[[params.social]]
-name = "RSS"
-icon = "fas fa-rss"
-url  = "/index.xml"
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 5
