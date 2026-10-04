@@ -7,7 +7,7 @@ tags: ["game-development", "typescript", "brazil"]
 draft: false
 ---
 
-Galim is a domino game built around the rules Anderson and Ralph play in Northern Brazil. The name comes from *galo*, a call made during the game. Turning those rules into software meant making each detail explicit: when a player may pass, how a hand ends, and how the score is credited.
+I had made games before, back when I was in college, but the idea for this one came during the pandemic. Dominoes are popular across Northern Brazil, including a point-scoring variant played in many homes. Galim is simply the name we gave this kind of game, not the name of the broader game category. Ralph and I play it with a set of regional rules, and turning those rules into software meant making each detail explicit: when a player may pass, how a hand ends, and how the score is credited.
 
 ## Start with the rules
 

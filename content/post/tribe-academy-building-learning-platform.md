@@ -7,7 +7,7 @@ tags: ["product-development", "education", "saas"]
 draft: false
 ---
 
-Tribe Academy started from a practical need: give teams a place to organize learning materials, guide people through clear next steps, and follow up on learning without losing sight of who can access what.
+The idea for Tribe Academy came from a recurring need I saw across companies: keeping internal courses organized and following up on learning as part of professional development plans (PDIs) and onboarding. Teams need a place to organize learning materials, guide people through clear next steps, and follow up on progress without losing sight of who can access what.
 
 That meant building more than a catalog of courses. The platform brings together organizations, teams, memberships, learning paths, assignments, and progress. Authors can organize a path into modules and activities, while learners can see their missions and pick up where they left off. Managers can review submitted work and follow progress for the people and paths they are responsible for.
 
