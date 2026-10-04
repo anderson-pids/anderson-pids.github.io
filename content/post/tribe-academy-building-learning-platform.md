@@ -9,7 +9,7 @@ draft: false
 
 The idea for Tribe Academy came from a recurring need I saw across companies: keeping internal courses organized and following up on learning as part of professional development plans (PDIs) and onboarding. Teams need a place to organize learning materials, guide people through clear next steps, and follow up on progress without losing sight of who can access what.
 
-![Tribe Academy sign-in screen; access is provided through an organization invitation](/images/tribe-academy-login.png)
+![Tribe Academy's authenticated learner dashboard, showing learning paths, progress, and recommended next steps](/images/tribe-academy-dashboard.png)
 
 Explore the published application at [tribe.academy.tribesolutions.com.br/app](https://tribe.academy.tribesolutions.com.br/app). Access requires an invitation from an organization.
 
