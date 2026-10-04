@@ -9,6 +9,10 @@ draft: false
 
 The idea for Tribe Academy came from a recurring need I saw across companies: keeping internal courses organized and following up on learning as part of professional development plans (PDIs) and onboarding. Teams need a place to organize learning materials, guide people through clear next steps, and follow up on progress without losing sight of who can access what.
 
+![Tribe Academy sign-in screen; access is provided through an organization invitation](/images/tribe-academy-login.png)
+
+Explore the published application at [tribe.academy.tribesolutions.com.br/app](https://tribe.academy.tribesolutions.com.br/app). Access requires an invitation from an organization.
+
 That meant building more than a catalog of courses. The platform brings together organizations, teams, memberships, learning paths, assignments, and progress. Authors can organize a path into modules and activities, while learners can see their missions and pick up where they left off. Managers can review submitted work and follow progress for the people and paths they are responsible for.
 
 ## Designing for more than one organization

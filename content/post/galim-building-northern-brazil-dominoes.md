@@ -9,6 +9,10 @@ draft: false
 
 I had made games before, back when I was in college, but the idea for this one came during the pandemic. Dominoes are popular across Northern Brazil, including a point-scoring variant played in many homes. Galim is simply the name we gave this kind of game, not the name of the broader game category. Ralph and I play it with a set of regional rules, and turning those rules into software meant making each detail explicit: when a player may pass, how a hand ends, and how the score is credited.
 
+![A Galim hand in progress against three bots](/images/galim-gameplay.png)
+
+The published game is available at [galim.tribesolutions.com.br](https://galim.tribesolutions.com.br/).
+
 ## Start with the rules
 
 The game uses the standard 28 dominoes, dealt into four hands of seven, with no draw pile. Partners sit opposite each other. Players score from the open ends of the board in multiples of five, and the starting double can open four paths through the board.
