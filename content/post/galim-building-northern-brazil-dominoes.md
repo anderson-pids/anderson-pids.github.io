@@ -1,8 +1,9 @@
 ---
 title: "Building Galim: A Domino Game from Northern Brazil"
 date: 2026-10-01T12:05:00-04:00
+lastmod: 2026-10-08
 author: Anderson Pimentel
-description: "Inside Galim: a React table, a TypeScript rules engine, and the browser-side flow that turns a player's move into a scored domino hand."
+description: "Galim now has online rooms for two to four people, server-controlled bots, private hands, and persistent Google profiles alongside its local React game."
 tags: ["game-development", "typescript", "brazil", "software-architecture"]
 cover:
   image: /images/galim-gameplay.png
@@ -19,6 +20,14 @@ I had made games before, back when I was in college, but the idea for this one c
 
 The published game is available at [galim.tribesolutions.com.br](https://galim.tribesolutions.com.br/).
 
+## October 8 update: bring the table online
+
+Galim now has two ways to play. **Single player** keeps the local game against three bots, without requiring an account. **Multiplayer** lets two to four people sign in with Google and join the same room from their own phones or computers. The online version is deployed through Coolify, and we have been able to play it with a real Google account.
+
+A room does not need to wait for four people. Its creator can fill the remaining seats with the existing characters — Tati, Bruno da ZL, or Rod do Alvorada — and change or remove those bots before starting. The table still has four seats and two partnerships, with at least two humans. Players sitting opposite each other are partners.
+
+The latest interface changes came from playing the game: the mode buttons disappear after a match starts, and the rooster control for announcing a *galo* now sits beside the player's hand. The announcement still has to happen before playing the tile.
+
 ## Start with the rules
 
 The game uses the standard 28 dominoes, dealt into four hands of seven, with no draw pile. Partners sit opposite each other. Players score from the open ends of the board in multiples of five, and the starting double can open four paths through the board.
@@ -33,7 +42,7 @@ The local React table lets one person play against three bots: a partner and two
 
 The interface handles announcements, automatic turns, scoring, hand history, and mobile layouts. Only the human player's hand is visible during play; the other hands are revealed when the hand ends so the result can be checked.
 
-## Architecture: the game runs in the browser
+## Single-player architecture: the game runs in the browser
 
 The playable local version is a React application built with Vite. Its TypeScript rules engine lives under `server/src/game`, but the web application imports that code directly into its browser bundle. The directory name does not mean that a move makes a network request: the local table executes the engine in the player's browser.
 
@@ -60,14 +69,48 @@ The responsibilities are split across a few concrete components:
 
 This gives the local table immediate responses without a gameplay API, a database or a network round trip for each turn. The trade-off is that the match lives in browser memory: reloading the page does not restore a saved match.
 
-### The boundary for online play
+## Multiplayer architecture: the server owns the match
 
-Hiding opponents' tiles in the interface is enough for the local experience, but it is not a security boundary: the browser holds the complete local match. A multiplayer version needs a server to own that state and send each player only the information they may see.
+Hiding opponents' tiles in the interface is enough for the local experience, but the browser still holds that entire local match. Online play uses a different boundary: an Express server runs the same TypeScript engine and sends each player a filtered view. During a hand, that view contains the player's own tiles, the public board and opponents' tile counts. Other hands are revealed only when the hand ends.
 
-There is already groundwork in the repository for Google sign-in and an explicit per-player view. Those pieces are separate from the published local game. Online rooms, a gameplay transport, persistent sessions and reconnection remain unfinished; the diagram above does not imply that they are available. In particular, there is no live WebSocket gameplay flow to describe yet.
+Synchronization currently uses HTTP requests, with the browser polling the room every 800 milliseconds. A move carries the room revision and a request identifier. The server checks the account, seat, turn and move before applying it; repeated requests cannot score the same action twice. There is no WebSocket transport in this version.
+
+| Part of the online game | Where it runs |
+| --- | --- |
+| Tile selection, board rendering and feedback | Each player's React client |
+| Room seats, match state, rules and scoring | The Express server |
+| Bot turns and required bot decisions | Server timers using the shared bot strategies |
+| Human identity verification | Google sign-in, validated by the server |
+| Saved human profiles | PostgreSQL on a persistent volume |
+
+The bots keep their single-player profiles and strategies. Their decisions receive only their own tiles and public information, even though the authoritative engine runs on the server. Their turns do not depend on the room creator keeping a browser timer running.
+
+### A stale move is not a lost connection
+
+One intermittent “reconnecting” message turned out to have a more specific cause. If another action had already advanced the room, the server rejected the client's old revision with HTTP 409. The interface treated that response as a disconnection, even though the server had answered normally.
+
+The client now fetches the current room state after a revision conflict, without replaying the stale action. Actual network failures still show a connection warning, which clears after synchronization recovers. Tests cover both a failed action request and a failed refresh following a conflict.
+
+A check of the Oracle host found available CPU, memory and disk capacity, no Galim container restarts or out-of-memory termination, and 30 successful API responses out of 30. That was a healthy sample at the time of inspection; it does not establish the cause of every past connection interruption.
+
+## Save people before building rankings
+
+Human profiles now survive application deployments. On a successful Google login, the server saves or updates the Google identity, name, email, optional profile image and login timestamps/count in PostgreSQL before issuing the session. An atomic update keeps concurrent logins from creating duplicate users.
+
+The database runs privately beside the application, with a persistent volume. The schema and application connection have been checked in production; the new profile records will be populated on subsequent logins. Storage tests use a real PostgreSQL instance, including new connections and simultaneous updates.
+
+This persistence currently covers **profiles**. Online rooms and sessions still live in one server instance's memory, and restarting it loses both. A disconnected player's seat remains reserved, so play waits if their turn arrives. Match history, rankings and automatic replacement of an absent player have not been implemented yet.
 
 ## Test complete hands
 
 Testing a domino game means checking whole sequences, not only individual moves. Recorded simulations let the tests replay turns and compare the final score and credits. Browser tests exercise complete hands through the table, including blocked games, announcements, and tie-breaks.
 
-Galim now has a local game that can run complete matches against bots, with continuous checks for its engine and web table. Online rooms, persistent sessions, and a full manual review of the experience remain future work. For now, the focus is making the local rules clear and the score explainable at the end of every hand.
+The October 8 delivery passed **221 server tests across 20 suites and 35 browser end-to-end tests**. Those checks include complete online hands with four browser sessions, mixed human/bot rooms, private hands, reconnection, the relocated rooster control and profile persistence. Public checks also covered starting a local game, the mobile layout, API availability and the redirect to Google sign-in. Automated authentication scenarios use a controlled provider; they complement the real-account play experience rather than replacing it.
+
+## Next: leaving, history and spectators
+
+The next implementation work has three product decisions to settle. When someone leaves, should a bot take over, and how long should a temporary disconnection reserve a seat? Should multiplayer rankings separate mixed tables from tables with four humans? Should a creator's spectator link work without Google sign-in?
+
+The intended history will distinguish single-player and multiplayer results, while rankings will apply only to multiplayer. Online results need to be recorded by the server, once per completed match, rather than trusting a victory reported by a browser.
+
+Spectators are a planned read-only role, enabled by the room creator. The goal is to watch the public table and score without exposing private hands or providing player controls. That would also support a shared TV display while each player uses a phone. These spectator, departure and ranking features are next steps, not part of the current release.
