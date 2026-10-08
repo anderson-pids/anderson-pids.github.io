@@ -109,8 +109,8 @@ The October 8 delivery passed **221 server tests across 20 suites and 35 browser
 
 ## Next: leaving, history and spectators
 
-The next implementation work has three product decisions to settle. When someone leaves, should a bot take over, and how long should a temporary disconnection reserve a seat? Should multiplayer rankings separate mixed tables from tables with four humans? Should a creator's spectator link work without Google sign-in?
+The next implementation work still has departure and ranking decisions to settle. When someone leaves, should a bot take over, and how long should a temporary disconnection reserve a seat? Should multiplayer rankings separate mixed tables from tables with four humans?
 
 The intended history will distinguish single-player and multiplayer results, while rankings will apply only to multiplayer. Online results need to be recorded by the server, once per completed match, rather than trusting a victory reported by a browser.
 
-Spectators are a planned read-only role, enabled by the room creator. The goal is to watch the public table and score without exposing private hands or providing player controls. That would also support a shared TV display while each player uses a phone. These spectator, departure and ranking features are next steps, not part of the current release.
+The spectator format is now defined: a read-only link, enabled by the room creator, that opens without Google sign-in. A TV can show the public table, score, moves, galo announcements and passes while each player uses a phone. The spectator view will expose no private hands or player controls. These spectator, departure and ranking features are next steps, not part of the current release.
