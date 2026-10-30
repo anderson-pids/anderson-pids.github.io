@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="955" viewBox="0 0 680 955" role="img" aria-labelledby="title desc">
+<title id="title">Anmar / a question reaches farm data</title>
+<desc id="desc">Private Telegram pilot · deployed boundaries · October 2026 Private Telegram conversation: Linked person and chat, Incoming messages and response delivery. Python worker · Agno · Coolify: Bounded conversation + required domain skills, SQLite: sessions, preferences and delivery state, LiteLLM → model: interpretation and tool selection. Operational tools + integration identity: Credentials and farm scope supplied by code, Anmar Apps issues short-lived access tokens, Separate credentials for Milk and Herd. Anmar operational APIs: Milk: daily records and historical production, Herd: identities, lactation and location, Source authorization, calculations and coverage</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#21756c"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#183c43}.title{font-size:27px;font-weight:700}.label{font-size:23px;font-weight:700}.detail{font-size:21px}.note{font-size:19px;fill:#46646a}.arrow{fill:none;stroke:#21756c;stroke-width:3;marker-end:url(#arrow)}</style>
+<rect width="680" height="955" rx="18" fill="#f4f7f6"/>
+<text x="28" y="44" class="title">Anmar / a question reaches farm data</text>
+<text x="28" y="79" class="note">Private Telegram pilot · deployed boundaries · October 2026</text>
+<rect x="28" y="116" width="624" height="116" rx="12" fill="white" stroke="#9cbdb7"/>
+<text x="48" y="150" class="label">Private Telegram conversation</text>
+<text x="48" y="181" class="detail">Linked person and chat</text>
+<text x="48" y="208" class="detail">Incoming messages and response delivery</text>
+<path d="M340 238 V276" class="arrow"/>
+<rect x="28" y="284" width="624" height="143" rx="12" fill="white" stroke="#9cbdb7"/>
+<text x="48" y="318" class="label">Python worker · Agno · Coolify</text>
+<text x="48" y="349" class="detail">Bounded conversation + required domain skills</text>
+<text x="48" y="376" class="detail">SQLite: sessions, preferences and delivery state</text>
+<text x="48" y="403" class="detail">LiteLLM → model: interpretation and tool selection</text>
+<path d="M340 433 V471" class="arrow"/>
+<rect x="28" y="479" width="624" height="143" rx="12" fill="white" stroke="#9cbdb7"/>
+<text x="48" y="513" class="label">Operational tools + integration identity</text>
+<text x="48" y="544" class="detail">Credentials and farm scope supplied by code</text>
+<text x="48" y="571" class="detail">Anmar Apps issues short-lived access tokens</text>
+<text x="48" y="598" class="detail">Separate credentials for Milk and Herd</text>
+<path d="M340 628 V666" class="arrow"/>
+<rect x="28" y="674" width="624" height="143" rx="12" fill="white" stroke="#9cbdb7"/>
+<text x="48" y="708" class="label">Anmar operational APIs</text>
+<text x="48" y="739" class="detail">Milk: daily records and historical production</text>
+<text x="48" y="766" class="detail">Herd: identities, lactation and location</text>
+<text x="48" y="793" class="detail">Source authorization, calculations and coverage</text>
+<text x="28" y="860" class="note">Results return through the worker to the conversation.</text>
+<text x="28" y="887" class="note">The model receives tool results, not integration secrets.</text>
+<text x="28" y="914" class="note">Specialist bots and proactive delivery remain planned.</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="928" viewBox="0 0 680 928" role="img" aria-labelledby="title desc">
+<title id="title">TribeSolutions / fiscal platform</title>
+<desc id="desc">Local implementation · no Sefaz transmission yet Browser → Laravel portal: PHP / Blade · session, CSRF and organization role, Review registrations, fiscal profiles and draft versions. Application services + PostgreSQL: Snapshots, exact decimals and number allocation, Version conflicts, locks, attempts and audit records, A1 vault: AES-256-GCM; key outside the database. XML, documents and controlled transport: NFePHP: XML, offline signature and DANFE preview, Draft PDF without numbering or fiscal authorization, SOAP / HTTPS code; default transport disabled. Planned: external Sefaz flow: Issuer readiness and authorized homologation test, Submit, consult and reconcile uncertain outcomes</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#21756c"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#183c43}.title{font-size:27px;font-weight:700}.label{font-size:23px;font-weight:700}.detail{font-size:21px}.note{font-size:19px;fill:#46646a}.arrow{fill:none;stroke:#21756c;stroke-width:3;marker-end:url(#arrow)}</style>
+<rect width="680" height="928" rx="18" fill="#f4f7f6"/>
+<text x="28" y="44" class="title">TribeSolutions / fiscal platform</text>
+<text x="28" y="79" class="note">Local implementation · no Sefaz transmission yet</text>
+<rect x="28" y="116" width="624" height="116" rx="12" fill="white" stroke="#9cbdb7"/>
+<text x="48" y="150" class="label">Browser → Laravel portal</text>
+<text x="48" y="181" class="detail">PHP / Blade · session, CSRF and organization role</text>
+<text x="48" y="208" class="detail">Review registrations, fiscal profiles and draft versions</text>
+<path d="M340 238 V276" class="arrow"/>
+<rect x="28" y="284" width="624" height="143" rx="12" fill="white" stroke="#9cbdb7"/>
+<text x="48" y="318" class="label">Application services + PostgreSQL</text>
+<text x="48" y="349" class="detail">Snapshots, exact decimals and number allocation</text>
+<text x="48" y="376" class="detail">Version conflicts, locks, attempts and audit records</text>
+<text x="48" y="403" class="detail">A1 vault: AES-256-GCM; key outside the database</text>
+<path d="M340 433 V471" class="arrow"/>
+<rect x="28" y="479" width="624" height="143" rx="12" fill="white" stroke="#9cbdb7"/>
+<text x="48" y="513" class="label">XML, documents and controlled transport</text>
+<text x="48" y="544" class="detail">NFePHP: XML, offline signature and DANFE preview</text>
+<text x="48" y="571" class="detail">Draft PDF without numbering or fiscal authorization</text>
+<text x="48" y="598" class="detail">SOAP / HTTPS code; default transport disabled</text>
+<path d="M340 628 V666" class="arrow"/>
+<rect x="28" y="674" width="624" height="116" rx="12" fill="white" stroke="#9cbdb7" stroke-dasharray="8 5"/>
+<text x="48" y="708" class="label">Planned: external Sefaz flow</text>
+<text x="48" y="739" class="detail">Issuer readiness and authorized homologation test</text>
+<text x="48" y="766" class="detail">Submit, consult and reconcile uncertain outcomes</text>
+<text x="28" y="833" class="note">Also planned: integration API → same fiscal services.</text>
+<text x="28" y="860" class="note">Anmar sales, inventory and payments stay in their apps.</text>
+<text x="28" y="887" class="note">Dashed box = future integration, not a deployed service.</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="787" viewBox="0 0 680 787" role="img" aria-labelledby="title desc">
+<title id="title">Galim / persistent online tables</title>
+<desc id="desc">HTTP polling · one authoritative writer · October 2026 Players and TV viewers: React / Vite clients · HTTP polling every 800 ms, Players: Google session + their own hand, TV: revocable link; tiles revealed only at hand end. Express + shared TypeScript engine: Validate identity, seat, revision and move, Run bots, presence timers and spectator projection, Serialize operations; acknowledge after DB commit. PostgreSQL · persistent volume: Profiles, sessions and room snapshots, Accepted request IDs and completed match history, Writer ownership, ranking and event redemption</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#21756c"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#183c43}.title{font-size:27px;font-weight:700}.label{font-size:23px;font-weight:700}.detail{font-size:21px}.note{font-size:19px;fill:#46646a}.arrow{fill:none;stroke:#21756c;stroke-width:3;marker-end:url(#arrow)}</style>
+<rect width="680" height="787" rx="18" fill="#f4f7f6"/>
+<text x="28" y="44" class="title">Galim / persistent online tables</text>
+<text x="28" y="79" class="note">HTTP polling · one authoritative writer · October 2026</text>
+<rect x="28" y="116" width="624" height="143" rx="12" fill="white" stroke="#9cbdb7"/>
+<text x="48" y="150" class="label">Players and TV viewers</text>
+<text x="48" y="181" class="detail">React / Vite clients · HTTP polling every 800 ms</text>
+<text x="48" y="208" class="detail">Players: Google session + their own hand</text>
+<text x="48" y="235" class="detail">TV: revocable link; tiles revealed only at hand end</text>
+<path d="M340 265 V303" class="arrow"/>
+<rect x="28" y="311" width="624" height="143" rx="12" fill="white" stroke="#9cbdb7"/>
+<text x="48" y="345" class="label">Express + shared TypeScript engine</text>
+<text x="48" y="376" class="detail">Validate identity, seat, revision and move</text>
+<text x="48" y="403" class="detail">Run bots, presence timers and spectator projection</text>
+<text x="48" y="430" class="detail">Serialize operations; acknowledge after DB commit</text>
+<path d="M340 460 V498" class="arrow"/>
+<rect x="28" y="506" width="624" height="143" rx="12" fill="white" stroke="#9cbdb7"/>
+<text x="48" y="540" class="label">PostgreSQL · persistent volume</text>
+<text x="48" y="571" class="detail">Profiles, sessions and room snapshots</text>
+<text x="48" y="598" class="detail">Accepted request IDs and completed match history</text>
+<text x="48" y="625" class="detail">Writer ownership, ranking and event redemption</text>
+<text x="28" y="692" class="note">Restart: restore committed state and original deadlines.</text>
+<text x="28" y="719" class="note">TV requests do not keep an abandoned table alive.</text>
+<text x="28" y="746" class="note">Local single-player still executes moves in the browser.</text>
+</svg>
